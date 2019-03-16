@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            // Attach to the node process, which must be started with --inspect for debugging.
+            "type": "node",
+            "request": "attach",
+            "name": "Attach 9229",
+            "port": 9229
+        },
+        {
             // Doesn't work for create-react-apps.  Error in import react.
             "type": "node",
             "request": "launch",

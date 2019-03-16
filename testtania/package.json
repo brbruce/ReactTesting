@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "start-debug-note": "Run from command line as npm run <scriptname>",
+    "start-debug-note": "Run from command line as npm run <scriptname>.  Default debug port is 9229",
     "start-debug1": "react-scripts --inspect start --runInBand --no-cache",
     "start-debug2": "react-scripts --inspect=:3002 start --runInBand --no-cache",
     "build": "react-scripts build",
