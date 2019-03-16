@@ -4,8 +4,29 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
         {
+            // Doesn't work for create-react-apps.  Error in import react.
+            "type": "node",
+            "request": "launch",
+            "name": "Launch via Node",
+            "program": "${file}"
+        },
+        {
+            // Should start a create-react-app using npm start but seems to get an error.
+            // It works if you just run npm start.  Not sure what the difference is.
+            // Also tried npm --inspect but same error.
+            "type": "node",
+            "request": "launch",
+            "name": "Launch via NPM",
+            "cwd": "${fileDirname}",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "start"
+            ]
+        },
+        {
+            // Launch Debugger in Chrome on port 3000 on running server, in remote dedugging mode and connect to the remote debug port.
+            // You need to start the server manually first.
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome TicTacToe",
